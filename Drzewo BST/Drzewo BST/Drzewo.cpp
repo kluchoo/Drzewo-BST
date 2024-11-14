@@ -44,45 +44,84 @@ void Drzewo::dodajElement(int wartosc) {
 	}
 
 };
+
+
 void Drzewo::usunElement(int wartosc) {
 	elementDrzewa* elementUsuwany = szukajElementu(wartosc);
-	if (elementUsuwany->lewy != nullptr && elementUsuwany->prawy != nullptr)
-	{
-		elementDrzewa* nastêpca = elementUsuwany->lewy;
-		while (nastêpca->prawy != nullptr) { nastêpca = nastêpca->prawy; }
+	if (elementUsuwany == nullptr) {
+		cout << "Element nie zosta³ znaleziony.\n";
+		return;
+	}
 
+	// Przypadek 1: Wêze³ ma dwoje dzieci
+	if (elementUsuwany->lewy != nullptr && elementUsuwany->prawy != nullptr) {
+		// ZnajdŸ nastêpnika (najwiêkszy wêze³ w lewym poddrzewie)
+		elementDrzewa* nastepca = elementUsuwany->lewy;
+		while (nastepca->prawy != nullptr) {
+			nastepca = nastepca->prawy;
+		}
 
+		// Skopiuj wartoœæ nastêpnika do elementu usuwanego
+		elementUsuwany->wartosc = nastepca->wartosc;
 
-		if (nastêpca->rodzic->lewy == nastêpca)
-		{
-			nastêpca->rodzic->lewy = nullptr;
+		// Usuñ nastêpnika
+		if (nastepca->rodzic->lewy == nastepca) {
+			nastepca->rodzic->lewy = nastepca->lewy;
 		}
 		else {
-			nastêpca->rodzic->prawy = nullptr;
+			nastepca->rodzic->prawy = nastepca->lewy;
 		}
 
-		if (elementUsuwany->rodzic->lewy == elementUsuwany)
-		{
-			elementUsuwany->rodzic->lewy = nastêpca;
+		if (nastepca->lewy != nullptr) {
+			nastepca->lewy->rodzic = nastepca->rodzic;
+		}
+
+		delete nastepca;
+	}
+	// Przypadek 2: Wêze³ ma jedno dziecko
+	else if (elementUsuwany->lewy != nullptr || elementUsuwany->prawy != nullptr) {
+		elementDrzewa* dziecko = (elementUsuwany->lewy != nullptr) ? elementUsuwany->lewy : elementUsuwany->prawy;
+
+		// Pod³¹cz dziecko do rodzica elementu usuwanego
+		if (elementUsuwany->rodzic != nullptr) {
+			if (elementUsuwany->rodzic->lewy == elementUsuwany) {
+				elementUsuwany->rodzic->lewy = dziecko;
+			}
+			else {
+				elementUsuwany->rodzic->prawy = dziecko;
+			}
 		}
 		else {
-			elementUsuwany->rodzic->prawy = nastêpca;
+			// Je¿eli elementUsuwany jest korzeniem, aktualizujemy korzeñ drzewa
+			korzen = dziecko;
 		}
 
-		elementUsuwany = nullptr;
-
+		dziecko->rodzic = elementUsuwany->rodzic;
+		delete elementUsuwany;
 	}
-	else if(elementUsuwany->lewy != nullptr || elementUsuwany->prawy != nullptr) {
-		if (elementUsuwany->rodzic->lewy == elementUsuwany) { elementUsuwany->rodzic->lewy = nullptr }
-		else { elementUsuwany->rodzic->prawy = elementUsuwany->prawy; }
-	}
+	// Przypadek 3: Wêze³ jest liœciem
 	else {
-		elementUsuwany = nullptr;
+		if (elementUsuwany->rodzic != nullptr) {
+			if (elementUsuwany->rodzic->lewy == elementUsuwany) {
+				elementUsuwany->rodzic->lewy = nullptr;
+			}
+			else {
+				elementUsuwany->rodzic->prawy = nullptr;
+			}
+		}
+		else {
+			// Usuwamy korzeñ drzewa, gdy jest jedynym wêz³em
+			korzen = nullptr;
+		}
+
+		delete elementUsuwany;
 	}
+}
 
 
-	delete elementUsuwany;
-};
+
+
+
 
 void Drzewo::usunDrzewo() {};
 
