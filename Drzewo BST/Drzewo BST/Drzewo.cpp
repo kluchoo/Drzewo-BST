@@ -45,7 +45,43 @@ void Drzewo::dodajElement(int wartosc) {
 
 };
 void Drzewo::usunElement(int wartosc) {
-	elementDrzewa* temp = nullptr;
+	elementDrzewa* elementUsuwany = szukajElementu(wartosc);
+	if (elementUsuwany->lewy != nullptr && elementUsuwany->prawy != nullptr)
+	{
+		elementDrzewa* nastêpca = elementUsuwany->lewy;
+		while (nastêpca->prawy != nullptr) { nastêpca = nastêpca->prawy; }
+
+
+
+		if (nastêpca->rodzic->lewy == nastêpca)
+		{
+			nastêpca->rodzic->lewy = nullptr;
+		}
+		else {
+			nastêpca->rodzic->prawy = nullptr;
+		}
+
+		if (elementUsuwany->rodzic->lewy == elementUsuwany)
+		{
+			elementUsuwany->rodzic->lewy = nastêpca;
+		}
+		else {
+			elementUsuwany->rodzic->prawy = nastêpca;
+		}
+
+		elementUsuwany = nullptr;
+
+	}
+	else if(elementUsuwany->lewy != nullptr || elementUsuwany->prawy != nullptr) {
+		if (elementUsuwany->rodzic->lewy == elementUsuwany) { elementUsuwany->rodzic->lewy = nullptr }
+		else { elementUsuwany->rodzic->prawy = elementUsuwany->prawy; }
+	}
+	else {
+		elementUsuwany = nullptr;
+	}
+
+
+	delete elementUsuwany;
 };
 
 void Drzewo::usunDrzewo() {};
