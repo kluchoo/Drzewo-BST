@@ -7,6 +7,8 @@ void Drzewo::dodajElement(int wartosc) {
 
 	elementDrzewa* nowyElement = new elementDrzewa;
 	nowyElement->wartosc = wartosc;
+	nowyElement->lewy = nullptr;
+	nowyElement->prawy = nullptr;
 
 
 	if (korzen == nullptr) {
