@@ -7,7 +7,11 @@ int main()
 
 	Drzewo drzewo;
 
+	drzewo.dodajElement(5);
+	drzewo.dodajElement(2);
+	drzewo.dodajElement(1);
 	drzewo.dodajElement(3);
-	drzewo.wyswietlDrzewo();
+
+	cout << drzewo.szukajElementu(3)->wartosc;
 
 }
