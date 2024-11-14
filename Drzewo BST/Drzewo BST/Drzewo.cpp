@@ -120,31 +120,44 @@ void Drzewo::usunElement(int wartosc) {
 
 
 
-
-
-
 void Drzewo::usunDrzewo() {};
+
+
+
+
 
 elementDrzewa* Drzewo::szukajElementu(int wartosc) {
 	elementDrzewa* temp = korzen;
 
 	while (temp->wartosc != wartosc){
-		if (temp->wartosc == wartosc) return temp;
+		
 		if (wartosc < temp->wartosc)
 		{
+			if (temp->lewy ==nullptr)
+			{
+				return nullptr;
+			}
 			temp = temp->lewy;
 			
 		}
 		if (temp->wartosc < wartosc)
 		{
+			if (temp->prawy == nullptr)
+			{
+				return nullptr;
+			}
 			temp = temp->prawy;
-			return temp;
+			
 		}
 		cout << temp->wartosc;
 	};
 
-	return korzen;
+	return nullptr;
 };
+
+
+
+
 
 void Drzewo::wyswietlDrzewo() {
 	int komenda = 0;

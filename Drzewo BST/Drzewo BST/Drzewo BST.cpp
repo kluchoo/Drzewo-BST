@@ -10,10 +10,12 @@ int main()
 	drzewo.dodajElement(5);
 	drzewo.dodajElement(2);
 	drzewo.dodajElement(1);
-	drzewo.dodajElement(3);
-	cout << drzewo.szukajElementu(3)->wartosc;
+	cout << "Dodanie elementu";
+	cout << endl;
 	drzewo.usunElement(3);
-	cout << drzewo.szukajElementu(3)->wartosc;
-
-
-}
+	cout << endl;
+	if (drzewo.szukajElementu(3) != nullptr)
+	{
+		cout << drzewo.szukajElementu(3)->wartosc;
+	}
+	
