@@ -128,6 +128,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Drzewo BST.cpp" />
+    <ClCompile Include="Drzewo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Drzewo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
