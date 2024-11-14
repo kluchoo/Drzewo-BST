@@ -1,13 +1,13 @@
 #pragma once
-using namespace std;
 #include <string>
+#include <iostream>
 
 struct elementDrzewa
 {
 	elementDrzewa* lewy;
 	elementDrzewa* prawy;
 	elementDrzewa* rodzic;
-	string wartosc;
+	std::string wartosc;
 
 	elementDrzewa() : rodzic(nullptr), lewy(nullptr), prawy(nullptr), wartosc("NULL") {};
 };
@@ -20,13 +20,13 @@ class Drzewo
 
 		Drzewo();
 
-		void dodajElement(string wartosc) {};
-		void usunElement(string wartosc) {};
-		void usunDrzewo() {};
-		elementDrzewa* szukajElementu(string wartosc) {};
-		void wyswietlDrzewo() {};
-		void zapiszDoPliku() {};
-		void wczytajZPliku() {}
+		void dodajElement(std::string wartosc) ;
+		void usunElement(std::string wartosc) ;
+		void usunDrzewo() ;
+		elementDrzewa* szukajElementu(std::string wartosc) ;
+		void wyswietlDrzewo() ;
+		void zapiszDoPliku() ;
+		void wczytajZPliku();
 
 };
 

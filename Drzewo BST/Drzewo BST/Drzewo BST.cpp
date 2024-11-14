@@ -4,5 +4,9 @@ using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
+	Drzewo drzewo;
+
+	drzewo.wyswietlDrzewo();
+
 }
