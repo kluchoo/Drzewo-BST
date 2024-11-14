@@ -7,6 +7,7 @@ int main()
 
 	Drzewo drzewo;
 
+	drzewo.dodajElement(3);
 	drzewo.wyswietlDrzewo();
 
 }
