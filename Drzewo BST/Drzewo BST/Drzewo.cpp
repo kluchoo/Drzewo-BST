@@ -188,7 +188,7 @@ void Drzewo::wyswietlDrzewo() {
 		
 		break;
 	case 2:
-
+		postorder(korzen);
 		break;
 
 	default:
