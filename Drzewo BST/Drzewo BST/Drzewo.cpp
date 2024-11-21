@@ -120,7 +120,21 @@ void Drzewo::usunElement(int wartosc) {
 
 
 
-void Drzewo::usunDrzewo() {};
+void Drzewo::usunDrzewo(elementDrzewa* element) {
+
+	if (element == nullptr) { 
+		return;
+	}
+
+	usunDrzewo(element->lewy); 
+
+	usunDrzewo(element->prawy);  
+
+	std::cout << element->wartosc << std::endl;  
+
+	delete element;  
+}
+
 
 
 
@@ -157,13 +171,20 @@ elementDrzewa* Drzewo::szukajElementu(int wartosc) {
 
 void preorder(elementDrzewa* element) {
 	if (!element) return;
-	
-	
+
+
 	cout << element->wartosc << " ";
 	preorder(element->lewy);
 	preorder(element->prawy);
 }
 
+void inorder(elementDrzewa* element) {
+	if (!element) return;
+
+	inorder(element->lewy);
+	cout << element->wartosc << " ";
+	inorder(element->prawy);
+}
 
 void postorder(elementDrzewa* element) {
 	if (!element) return;
@@ -177,24 +198,10 @@ void postorder(elementDrzewa* element) {
 void Drzewo::wyswietlDrzewo() {
 	int komenda = 0;
 	elementDrzewa temp = *korzen;
+
 	cout << "0 - preorder, 1 - inorder, 2 - postorder\n>  ";
 	cin >> komenda;
-	switch (komenda)
-	{
-	case 0:
-		preorder(korzen);
-		break;
-	case 1:
-		
-		break;
-	case 2:
-		postorder(korzen);
-		break;
-
-	default:
-		break;
-	}
-};
+}
 
 
 

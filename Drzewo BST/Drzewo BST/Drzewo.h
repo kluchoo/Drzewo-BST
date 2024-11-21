@@ -24,7 +24,7 @@ class Drzewo
 
 		void dodajElement(int wartosc) ;
 		void usunElement(int wartosc) ;
-		void usunDrzewo() ;
+		void usunDrzewo(elementDrzewa * element) ;
 		elementDrzewa* szukajElementu(int wartosc) ;
 		void wyswietlDrzewo() ;
 		void zapiszDoPliku() ;
