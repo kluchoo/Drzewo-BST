@@ -12,10 +12,6 @@ int main()
 	drzewo.dodajElement(1);
 	cout << "Dodanie elementu";
 	cout << endl;
-	drzewo.usunElement(3);
-	cout << endl;
-	if (drzewo.szukajElementu(3) != nullptr)
-	{
-		cout << drzewo.szukajElementu(3)->wartosc;
-	}
+	drzewo.wyswietlDrzewo();
+}
 	
