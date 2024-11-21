@@ -126,13 +126,15 @@ void Drzewo::usunDrzewo(elementDrzewa* element) {
 		return;
 	}
 
-	usunDrzewo(element->lewy); 
+	usunDrzewo(element->lewy);  
 
 	usunDrzewo(element->prawy);  
 
-	std::cout << element->wartosc << std::endl;  
+	std::cout << element->wartosc << std::endl;   // wypisanie  
 
-	delete element;  
+	delete element;   // element usuwania
+
+
 }
 
 
