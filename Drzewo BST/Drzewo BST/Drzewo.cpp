@@ -187,7 +187,22 @@ void Drzewo::wyswietlDrzewo() {
 
 	cout << "0 - preorder, 1 - inorder, 2 - postorder\n>  ";
 	cin >> komenda;
-}
+	switch (komenda)
+	{
+	case 0:
+		preorder(korzen);
+		break;
+	case 1:
+		inorder(korzen);
+		break;
+	case 2:
+		postorder(korzen);
+		break;
+
+	default:
+		break;
+	}
+};
 
 //dasdfasd
 
