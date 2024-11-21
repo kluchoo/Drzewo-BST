@@ -189,7 +189,7 @@ void Drzewo::wyswietlDrzewo() {
 	cin >> komenda;
 }
 
-
+//dasdfasd
 
 
 void Drzewo::zapiszDoPliku() {
