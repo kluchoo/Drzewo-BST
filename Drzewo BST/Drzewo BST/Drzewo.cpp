@@ -124,8 +124,6 @@ void Drzewo::usunDrzewo() {};
 
 
 
-
-
 elementDrzewa* Drzewo::szukajElementu(int wartosc) {
 	elementDrzewa* temp = korzen;
 
@@ -156,6 +154,16 @@ elementDrzewa* Drzewo::szukajElementu(int wartosc) {
 };
 
 
+
+void preorder(elementDrzewa* element) {
+	if (!element) return;
+
+
+	cout << element->wartosc << " ";
+	preorder(element->lewy);
+	preorder(element->prawy);
+}
+
 void inorder(elementDrzewa* element) {
 	if (!element) return;
 
@@ -164,31 +172,26 @@ void inorder(elementDrzewa* element) {
 	inorder(element->prawy);
 }
 
+void postorder(elementDrzewa* element) {
+	if (!element) return;
+
+	postorder(element->lewy);
+	postorder(element->prawy);
+	cout << element->wartosc << " ";
+}
+
 
 void Drzewo::wyswietlDrzewo() {
 	int komenda = 0;
 	elementDrzewa temp = *korzen;
 
-
-
 	cout << "0 - preorder, 1 - inorder, 2 - postorder\n>  ";
 	cin >> komenda;
-	switch (komenda)
-	{
-	case 0:
+}
 
-		break;
-	case 1:
-		inorder(korzen);
-		break;
-	case 2:
 
-		break;
 
-	default:
-		break;
-	}
-};
+
 void Drzewo::zapiszDoPliku() {
 };
 void Drzewo::wczytajZPliku() {

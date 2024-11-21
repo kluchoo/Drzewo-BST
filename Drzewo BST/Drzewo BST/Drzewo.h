@@ -29,6 +29,7 @@ class Drzewo
 		void wyswietlDrzewo() ;
 		void zapiszDoPliku() ;
 		void wczytajZPliku();
+		
 
 };
 
