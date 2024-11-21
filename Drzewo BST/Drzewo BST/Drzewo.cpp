@@ -156,21 +156,33 @@ elementDrzewa* Drzewo::szukajElementu(int wartosc) {
 };
 
 
+void inorder(elementDrzewa* element) {
+	if (!element) return;
 
+	inorder(element->lewy);
+	cout << element->wartosc << " ";
+	inorder(element->prawy);
+}
 
 
 void Drzewo::wyswietlDrzewo() {
 	int komenda = 0;
 	elementDrzewa temp = *korzen;
 
+
+
 	cout << "0 - preorder, 1 - inorder, 2 - postorder\n>  ";
 	cin >> komenda;
 	switch (komenda)
 	{
 	case 0:
-		while (true) {
-			
-		}
+
+		break;
+	case 1:
+		inorder(korzen);
+		break;
+	case 2:
+
 		break;
 
 	default:
