@@ -2,7 +2,6 @@
 #include "Drzewo.h"
 #include <iostream>
 #include <fstream>
-#include <string>
 using namespace std;
 
 /**
@@ -22,8 +21,8 @@ plik::~plik()
 /**
  * @brief Zapisuje drzewo do pliku w formacie binarnym.
  *
- * @param element WskaŸnik na korzeñ drzewa.
- * @param plik Œcie¿ka do pliku, w którym ma zostaæ zapisane drzewo.
+ * @param element Wskaznik na korzen drzewa.
+ * @param plik sciezka do pliku, w ktorym ma zostac zapisane drzewo.
  */
 void plik::zapiszDoPlikuBinarnego(elementDrzewa* element, const std::string& plik) {
     std::ofstream file(plik, std::ios::binary);
@@ -40,7 +39,7 @@ void plik::zapiszDoPlikuBinarnego(elementDrzewa* element, const std::string& pli
 /**
  * @brief Rekurencyjnie zapisuje elementy drzewa do pliku w formacie binarnym.
  *
- * @param element WskaŸnik na element drzewa.
+ * @param element Wskaznik na element drzewa.
  * @param file Referencja do strumienia pliku.
  */
 void plik::zapiszElementDoPlikuBinarnego(elementDrzewa* element, std::ofstream& file) {
@@ -54,8 +53,8 @@ void plik::zapiszElementDoPlikuBinarnego(elementDrzewa* element, std::ofstream& 
 /**
  * @brief Wczytuje drzewo z pliku tekstowego.
  *
- * @param sciezka Œcie¿ka do pliku, z którego ma zostaæ wczytane drzewo.
- * @param drzewo Referencja do obiektu drzewa, do którego maj¹ zostaæ dodane elementy.
+ * @param sciezka sciezka do pliku, z ktorego ma zostac wczytane drzewo.
+ * @param drzewo Referencja do obiektu drzewa, do ktorego maja zostac dodane elementy.
  */
 void plik::wczytajZPliku(std::string sciezka, Drzewo& drzewo) {
     std::fstream plik(sciezka, std::ios::in);

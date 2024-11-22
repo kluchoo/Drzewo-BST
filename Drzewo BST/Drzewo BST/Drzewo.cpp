@@ -1,21 +1,20 @@
 #include "Drzewo.h"
 #include <iostream>
 #include <fstream>
-#include <string>
 
 using namespace std;
 
 /**
  * @brief Konstruktor klasy Drzewo.
  *
- * Inicjalizuje korzeñ drzewa jako nullptr oraz iloœæ elementów jako 0.
+ * Inicjalizuje korzen drzewa jako nullptr oraz ilosc elementow jako 0.
  */
-Drzewo::Drzewo() : korzen(nullptr), iloscElementow{} {}
+Drzewo::Drzewo() : korzen(nullptr), iloscElementow(0) {}
 
 /**
  * @brief Dodaje nowy element do drzewa.
  *
- * @param wartosc Wartoœæ nowego elementu do dodania.
+ * @param wartosc Wartosc nowego elementu do dodania.
  */
 void Drzewo::dodajElement(int wartosc) {
     elementDrzewa* nowyElement = new elementDrzewa;
@@ -55,9 +54,9 @@ void Drzewo::dodajElement(int wartosc) {
 }
 
 /**
- * @brief Usuwa element o podanej wartoœci z drzewa.
+ * @brief Usuwa element o podanej wartosci z drzewa.
  *
- * @param wartosc Wartoœæ elementu do usuniêcia.
+ * @param wartosc Wartosc elementu do usuniecia.
  */
 void Drzewo::usunElement(int wartosc) {
     elementDrzewa* elementUsuwany = szukajElementu(wartosc);
@@ -66,18 +65,18 @@ void Drzewo::usunElement(int wartosc) {
         return;
     }
 
-    // Przypadek 1: Wêze³ ma dwoje dzieci
+    // Przypadek 1: Wezel ma dwoje dzieci
     if (elementUsuwany->lewy != nullptr && elementUsuwany->prawy != nullptr) {
-        // ZnajdŸ nastêpnika (najwiêkszy wêze³ w lewym poddrzewie)
+        // Znajdz nastepnika (najwiekszy wezel w lewym poddrzewie)
         elementDrzewa* nastepca = elementUsuwany->lewy;
         while (nastepca->prawy != nullptr) {
             nastepca = nastepca->prawy;
         }
 
-        // Skopiuj wartoœæ nastêpnika do elementu usuwanego
+        // Skopiuj wartosc nastepnika do elementu usuwanego
         elementUsuwany->wartosc = nastepca->wartosc;
 
-        // Usuñ nastêpnika
+        // Usun nastepnika
         if (nastepca->rodzic->lewy == nastepca) {
             nastepca->rodzic->lewy = nastepca->lewy;
         }
@@ -91,11 +90,11 @@ void Drzewo::usunElement(int wartosc) {
 
         delete nastepca;
     }
-    // Przypadek 2: Wêze³ ma jedno dziecko
+    // Przypadek 2: Wezel ma jedno dziecko
     else if (elementUsuwany->lewy != nullptr || elementUsuwany->prawy != nullptr) {
         elementDrzewa* dziecko = (elementUsuwany->lewy != nullptr) ? elementUsuwany->lewy : elementUsuwany->prawy;
 
-        // Pod³¹cz dziecko do rodzica elementu usuwanego
+        // Podlacz dziecko do rodzica elementu usuwanego
         if (elementUsuwany->rodzic != nullptr) {
             if (elementUsuwany->rodzic->lewy == elementUsuwany) {
                 elementUsuwany->rodzic->lewy = dziecko;
@@ -105,14 +104,14 @@ void Drzewo::usunElement(int wartosc) {
             }
         }
         else {
-            // Je¿eli elementUsuwany jest korzeniem, aktualizujemy korzeñ drzewa
+            // Jezeli elementUsuwany jest korzeniem, aktualizujemy korzen drzewa
             korzen = dziecko;
         }
 
         dziecko->rodzic = elementUsuwany->rodzic;
         delete elementUsuwany;
     }
-    // Przypadek 3: Wêze³ jest liœciem
+    // Przypadek 3: Wezel jest lisciem
     else {
         if (elementUsuwany->rodzic != nullptr) {
             if (elementUsuwany->rodzic->lewy == elementUsuwany) {
@@ -123,7 +122,7 @@ void Drzewo::usunElement(int wartosc) {
             }
         }
         else {
-            // Usuwamy korzeñ drzewa, gdy jest jedynym wêz³em
+            // Usuwamy korzen drzewa, gdy jest jedynym wezlem
             korzen = nullptr;
         }
 
@@ -132,9 +131,9 @@ void Drzewo::usunElement(int wartosc) {
 }
 
 /**
- * @brief Usuwa ca³e drzewo.
+ * @brief Usuwa cale drzewo.
  *
- * @param element WskaŸnik na korzeñ drzewa.
+ * @param element Wskaznik na korzen drzewa.
  */
 void Drzewo::usunDrzewo(elementDrzewa* element) {
     if (element == nullptr) {
@@ -149,10 +148,10 @@ void Drzewo::usunDrzewo(elementDrzewa* element) {
 }
 
 /**
- * @brief Szuka elementu o podanej wartoœci w drzewie.
+ * @brief Szuka elementu o podanej wartosci w drzewie.
  *
- * @param wartosc Wartoœæ elementu do znalezienia.
- * @return elementDrzewa* WskaŸnik na znaleziony element lub nullptr, jeœli element nie zosta³ znaleziony.
+ * @param wartosc Wartosc elementu do znalezienia.
+ * @return elementDrzewa* Wskaznik na znaleziony element lub nullptr, jesli element nie zostal znaleziony.
  */
 elementDrzewa* Drzewo::szukajElementu(int wartosc) {
     elementDrzewa* temp = korzen;
@@ -181,9 +180,9 @@ elementDrzewa* Drzewo::szukajElementu(int wartosc) {
 }
 
 /**
- * @brief Wykonuje przejœcie drzewa w porz¹dku preorder.
+ * @brief Wykonuje przejscie drzewa w porzadku preorder.
  *
- * @param element WskaŸnik na korzeñ drzewa.
+ * @param element Wskaznik na korzen drzewa.
  */
 void preorder(elementDrzewa* element) {
     if (!element) return;
@@ -194,9 +193,9 @@ void preorder(elementDrzewa* element) {
 }
 
 /**
- * @brief Wykonuje przejœcie drzewa w porz¹dku inorder.
+ * @brief Wykonuje przejscie drzewa w porzadku inorder.
  *
- * @param element WskaŸnik na korzeñ drzewa.
+ * @param element Wskaznik na korzen drzewa.
  */
 void inorder(elementDrzewa* element) {
     if (!element) return;
@@ -207,9 +206,9 @@ void inorder(elementDrzewa* element) {
 }
 
 /**
- * @brief Wykonuje przejœcie drzewa w porz¹dku postorder.
+ * @brief Wykonuje przejscie drzewa w porzadku postorder.
  *
- * @param element WskaŸnik na korzeñ drzewa.
+ * @param element Wskaznik na korzen drzewa.
  */
 void postorder(elementDrzewa* element) {
     if (!element) return;
@@ -222,7 +221,7 @@ void postorder(elementDrzewa* element) {
 /**
  * @brief Zapisuje drzewo do pliku.
  *
- * @param element WskaŸnik na korzeñ drzewa.
+ * @param element Wskaznik na korzen drzewa.
  * @param plik Referencja do strumienia pliku.
  */
 void Drzewo::zapiszDoPliku(elementDrzewa* element, std::ofstream& plik) {
@@ -234,7 +233,7 @@ void Drzewo::zapiszDoPliku(elementDrzewa* element, std::ofstream& plik) {
 }
 
 /**
- * @brief Wyœwietla drzewo.
+ * @brief Wyswietla drzewo.
  */
 void Drzewo::wyswietlDrzewo() {
     int komenda = 0;

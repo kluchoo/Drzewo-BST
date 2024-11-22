@@ -12,13 +12,13 @@
 void \mbox{\hyperlink{class_drzewo_ae95fe0076bf92a076244f41f837c24ca}{dodaj\+Element}} (int wartosc)
 \begin{DoxyCompactList}\small\item\em Dodaje nowy element do drzewa. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_drzewo_a4d8d0cd6fdff30dd74d821d0b2996c1a}{usun\+Element}} (int wartosc)
-\begin{DoxyCompactList}\small\item\em Usuwa element o podanej wartoœci z drzewa. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Usuwa element o podanej wartosci z drzewa. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_drzewo_acab4bec1a0ccf452d2e8affabe8ddb76}{usun\+Drzewo}} (\mbox{\hyperlink{structelement_drzewa}{element\+Drzewa}} \texorpdfstring{$\ast$}{*}element)
-\begin{DoxyCompactList}\small\item\em Usuwa ca³e drzewo. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Usuwa cale drzewo. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structelement_drzewa}{element\+Drzewa}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_drzewo_aeb04ca25373b44c6d4d85d88cd7c68af}{szukaj\+Elementu}} (int wartosc)
-\begin{DoxyCompactList}\small\item\em Szuka elementu o podanej wartoœci w drzewie. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Szuka elementu o podanej wartosci w drzewie. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_drzewo_a01c31f40e78edea04db40037b2da5910}{wyswietl\+Drzewo}} ()
-\begin{DoxyCompactList}\small\item\em Wyœwietla drzewo. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Wyswietla drzewo. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_drzewo_a5c8e380f2873a996018ee744d0323367}{zapisz\+Do\+Pliku}} (\mbox{\hyperlink{structelement_drzewa}{element\+Drzewa}} \texorpdfstring{$\ast$}{*}element, std\+::ofstream \&\mbox{\hyperlink{classplik}{plik}})
 \begin{DoxyCompactList}\small\item\em Zapisuje drzewo do pliku. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsubsection*{Public Attributes}
@@ -51,9 +51,9 @@ Drzewo\+::\+Drzewo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 Konstruktor klasy \doxylink{class_drzewo}{Drzewo}. 
 
-Inicjalizuje korzeñ drzewa jako nullptr oraz iloœæ elementów jako 0. 
+Inicjalizuje korzen drzewa jako nullptr oraz ilosc elementow jako 0. 
 
-Definition at line \mbox{\hyperlink{_drzewo_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_drzewo_8cpp_source}{Drzewo.\+cpp}}.
+Definition at line \mbox{\hyperlink{_drzewo_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{_drzewo_8cpp_source}{Drzewo.\+cpp}}.
 
 
 
@@ -70,12 +70,12 @@ Dodaje nowy element do drzewa.
 
 
 \begin{DoxyParams}{Parameters}
-{\em wartosc} & Wartoœæ nowego elementu do dodania. \\
+{\em wartosc} & Wartosc nowego elementu do dodania. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_drzewo_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{_drzewo_8cpp_source}{Drzewo.\+cpp}}.
+Definition at line \mbox{\hyperlink{_drzewo_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{_drzewo_8cpp_source}{Drzewo.\+cpp}}.
 
 \Hypertarget{class_drzewo_aeb04ca25373b44c6d4d85d88cd7c68af}\index{Drzewo@{Drzewo}!szukajElementu@{szukajElementu}}
 \index{szukajElementu@{szukajElementu}!Drzewo@{Drzewo}}
@@ -85,19 +85,19 @@ Definition at line \mbox{\hyperlink{_drzewo_8cpp_source_l00020}{20}} of file \mb
 
 
 
-Szuka elementu o podanej wartoœci w drzewie. 
+Szuka elementu o podanej wartosci w drzewie. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em wartosc} & Wartoœæ elementu do znalezienia. \\
+{\em wartosc} & Wartosc elementu do znalezienia. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-element\+Drzewa\texorpdfstring{$\ast$}{*} WskaŸnik na znaleziony element lub nullptr, jeœli element nie zosta³ znaleziony. 
+element\+Drzewa\texorpdfstring{$\ast$}{*} Wskaznik na znaleziony element lub nullptr, jesli element nie zostal znaleziony. 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_drzewo_8cpp_source_l00157}{157}} of file \mbox{\hyperlink{_drzewo_8cpp_source}{Drzewo.\+cpp}}.
+Definition at line \mbox{\hyperlink{_drzewo_8cpp_source_l00156}{156}} of file \mbox{\hyperlink{_drzewo_8cpp_source}{Drzewo.\+cpp}}.
 
 \Hypertarget{class_drzewo_acab4bec1a0ccf452d2e8affabe8ddb76}\index{Drzewo@{Drzewo}!usunDrzewo@{usunDrzewo}}
 \index{usunDrzewo@{usunDrzewo}!Drzewo@{Drzewo}}
@@ -107,16 +107,16 @@ void Drzewo\+::usun\+Drzewo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{str
 
 
 
-Usuwa ca³e drzewo. 
+Usuwa cale drzewo. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em element} & WskaŸnik na korzeñ drzewa. \\
+{\em element} & Wskaznik na korzen drzewa. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_drzewo_8cpp_source_l00139}{139}} of file \mbox{\hyperlink{_drzewo_8cpp_source}{Drzewo.\+cpp}}.
+Definition at line \mbox{\hyperlink{_drzewo_8cpp_source_l00138}{138}} of file \mbox{\hyperlink{_drzewo_8cpp_source}{Drzewo.\+cpp}}.
 
 \Hypertarget{class_drzewo_a4d8d0cd6fdff30dd74d821d0b2996c1a}\index{Drzewo@{Drzewo}!usunElement@{usunElement}}
 \index{usunElement@{usunElement}!Drzewo@{Drzewo}}
@@ -126,16 +126,16 @@ void Drzewo\+::usun\+Element (\begin{DoxyParamCaption}\item[{int}]{wartosc}{}\en
 
 
 
-Usuwa element o podanej wartoœci z drzewa. 
+Usuwa element o podanej wartosci z drzewa. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em wartosc} & Wartoœæ elementu do usuniêcia. \\
+{\em wartosc} & Wartosc elementu do usuniecia. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_drzewo_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{_drzewo_8cpp_source}{Drzewo.\+cpp}}.
+Definition at line \mbox{\hyperlink{_drzewo_8cpp_source_l00061}{61}} of file \mbox{\hyperlink{_drzewo_8cpp_source}{Drzewo.\+cpp}}.
 
 \Hypertarget{class_drzewo_a01c31f40e78edea04db40037b2da5910}\index{Drzewo@{Drzewo}!wyswietlDrzewo@{wyswietlDrzewo}}
 \index{wyswietlDrzewo@{wyswietlDrzewo}!Drzewo@{Drzewo}}
@@ -145,11 +145,11 @@ void Drzewo\+::wyswietl\+Drzewo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCapti
 
 
 
-Wyœwietla drzewo. 
+Wyswietla drzewo. 
 
 
 
-Definition at line \mbox{\hyperlink{_drzewo_8cpp_source_l00239}{239}} of file \mbox{\hyperlink{_drzewo_8cpp_source}{Drzewo.\+cpp}}.
+Definition at line \mbox{\hyperlink{_drzewo_8cpp_source_l00238}{238}} of file \mbox{\hyperlink{_drzewo_8cpp_source}{Drzewo.\+cpp}}.
 
 \Hypertarget{class_drzewo_a5c8e380f2873a996018ee744d0323367}\index{Drzewo@{Drzewo}!zapiszDoPliku@{zapiszDoPliku}}
 \index{zapiszDoPliku@{zapiszDoPliku}!Drzewo@{Drzewo}}
@@ -163,14 +163,14 @@ Zapisuje drzewo do pliku.
 
 
 \begin{DoxyParams}{Parameters}
-{\em element} & WskaŸnik na korzeñ drzewa. \\
+{\em element} & Wskaznik na korzen drzewa. \\
 \hline
 {\em plik} & Referencja do strumienia pliku. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_drzewo_8cpp_source_l00228}{228}} of file \mbox{\hyperlink{_drzewo_8cpp_source}{Drzewo.\+cpp}}.
+Definition at line \mbox{\hyperlink{_drzewo_8cpp_source_l00227}{227}} of file \mbox{\hyperlink{_drzewo_8cpp_source}{Drzewo.\+cpp}}.
 
 
 

@@ -6,12 +6,12 @@
 using namespace std;
 
 /**
- * @brief Główna funkcja programu.
+ * @brief Głowna funkcja programu.
  *
- * Funkcja main() obsługuje interakcję z użytkownikiem, umożliwiając dodawanie, usuwanie elementów drzewa,
- * wyświetlanie drzewa oraz zapisywanie i wczytywanie drzewa z pliku.
+ * Funkcja main() obsluguje interakcje z uzytkownikiem, umozliwiajac dodawanie, usuwanie elementow drzewa,
+ * wyswietlanie drzewa oraz zapisywanie i wczytywanie drzewa z pliku.
  *
- * @return int Zwraca 0, jeśli program zakończył się pomyślnie, lub 1, jeśli wystąpił błąd otwarcia pliku.
+ * @return int Zwraca 0, jesli program zakonczyl sie pomyslnie, lub 1, jesli wystapil blad otwarcia pliku.
  */
 int main()
 {

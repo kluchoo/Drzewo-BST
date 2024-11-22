@@ -96,70 +96,69 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_drzewo_8h.html">Drzewo.h</a>&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using namespace </span>std;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classplik.html#a2077175d3e1ad2c4272ba19361a97d83">   11</a></span><a class="code hl_function" href="classplik.html#a2077175d3e1ad2c4272ba19361a97d83">plik::plik</a>()</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classplik.html#a2077175d3e1ad2c4272ba19361a97d83">   10</a></span><a class="code hl_function" href="classplik.html#a2077175d3e1ad2c4272ba19361a97d83">plik::plik</a>()</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>}</div>
 </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classplik.html#a346f00eed3cb35c564f6524150f50c94">   18</a></span><a class="code hl_function" href="classplik.html#a346f00eed3cb35c564f6524150f50c94">plik::~plik</a>()</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classplik.html#a346f00eed3cb35c564f6524150f50c94">   17</a></span><a class="code hl_function" href="classplik.html#a346f00eed3cb35c564f6524150f50c94">plik::~plik</a>()</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
 </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classplik.html#a74def0dd8fe2f3f2f7a2ca09aa8940e9">   28</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classplik.html#a74def0dd8fe2f3f2f7a2ca09aa8940e9">plik::zapiszDoPlikuBinarnego</a>(<a class="code hl_struct" href="structelement_drzewa.html">elementDrzewa</a>* element, <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classplik.html">plik</a>) {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    std::ofstream file(<a class="code hl_class" href="classplik.html">plik</a>, std::ios::binary);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">if</span> (!file) {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Nie mozna otworzyc pliku do zapisu: &quot;</span> &lt;&lt; <a class="code hl_class" href="classplik.html">plik</a> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_function" href="classplik.html#a794f06d300f508356e7859e23f125bd3">zapiszElementDoPlikuBinarnego</a>(element, file);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    file.close();</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>}</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classplik.html#a74def0dd8fe2f3f2f7a2ca09aa8940e9">   27</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classplik.html#a74def0dd8fe2f3f2f7a2ca09aa8940e9">plik::zapiszDoPlikuBinarnego</a>(<a class="code hl_struct" href="structelement_drzewa.html">elementDrzewa</a>* element, <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classplik.html">plik</a>) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    std::ofstream file(<a class="code hl_class" href="classplik.html">plik</a>, std::ios::binary);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">if</span> (!file) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Nie mozna otworzyc pliku do zapisu: &quot;</span> &lt;&lt; <a class="code hl_class" href="classplik.html">plik</a> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_function" href="classplik.html#a794f06d300f508356e7859e23f125bd3">zapiszElementDoPlikuBinarnego</a>(element, file);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    file.close();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
 </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classplik.html#a794f06d300f508356e7859e23f125bd3">   46</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classplik.html#a794f06d300f508356e7859e23f125bd3">plik::zapiszElementDoPlikuBinarnego</a>(<a class="code hl_struct" href="structelement_drzewa.html">elementDrzewa</a>* element, std::ofstream&amp; file) {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> (element != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_function" href="classplik.html#a794f06d300f508356e7859e23f125bd3">zapiszElementDoPlikuBinarnego</a>(element-&gt;<a class="code hl_variable" href="structelement_drzewa.html#abdde126fd8b3f0d86ff6201cdb8a4b72">lewy</a>, file);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        file.write(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(&amp;element-&gt;<a class="code hl_variable" href="structelement_drzewa.html#a168d996301a58ced1790017feeff4dff">wartosc</a>), <span class="keyword">sizeof</span>(element-&gt;<a class="code hl_variable" href="structelement_drzewa.html#a168d996301a58ced1790017feeff4dff">wartosc</a>));</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_function" href="classplik.html#a794f06d300f508356e7859e23f125bd3">zapiszElementDoPlikuBinarnego</a>(element-&gt;<a class="code hl_variable" href="structelement_drzewa.html#a343dc72026d4ee5fc39709306ec1f850">prawy</a>, file);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classplik.html#a794f06d300f508356e7859e23f125bd3">   45</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classplik.html#a794f06d300f508356e7859e23f125bd3">plik::zapiszElementDoPlikuBinarnego</a>(<a class="code hl_struct" href="structelement_drzewa.html">elementDrzewa</a>* element, std::ofstream&amp; file) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">if</span> (element != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_function" href="classplik.html#a794f06d300f508356e7859e23f125bd3">zapiszElementDoPlikuBinarnego</a>(element-&gt;<a class="code hl_variable" href="structelement_drzewa.html#abdde126fd8b3f0d86ff6201cdb8a4b72">lewy</a>, file);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        file.write(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(&amp;element-&gt;<a class="code hl_variable" href="structelement_drzewa.html#a168d996301a58ced1790017feeff4dff">wartosc</a>), <span class="keyword">sizeof</span>(element-&gt;<a class="code hl_variable" href="structelement_drzewa.html#a168d996301a58ced1790017feeff4dff">wartosc</a>));</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_function" href="classplik.html#a794f06d300f508356e7859e23f125bd3">zapiszElementDoPlikuBinarnego</a>(element-&gt;<a class="code hl_variable" href="structelement_drzewa.html#a343dc72026d4ee5fc39709306ec1f850">prawy</a>, file);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
 </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classplik.html#a9464c40ea3c2af2febf4bab97e0ff295">   60</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classplik.html#a9464c40ea3c2af2febf4bab97e0ff295">plik::wczytajZPliku</a>(std::string sciezka, <a class="code hl_class" href="class_drzewo.html">Drzewo</a>&amp; drzewo) {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    std::fstream <a class="code hl_function" href="classplik.html#a2077175d3e1ad2c4272ba19361a97d83">plik</a>(sciezka, std::ios::in);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">if</span> (!<a class="code hl_class" href="classplik.html">plik</a>) {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        cout &lt;&lt; <span class="stringliteral">&quot;plik nie istnieje!&quot;</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">do</span> {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordtype">int</span> a;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_class" href="classplik.html">plik</a> &gt;&gt; a;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classplik.html">plik</a>.eof()) <a class="code hl_variable" href="classplik.html#a94c965a7c2b5c38f3fe79a07838f1cac">drzewo</a>.<a class="code hl_function" href="class_drzewo.html#ae95fe0076bf92a076244f41f837c24ca">dodajElement</a>(a);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    } <span class="keywordflow">while</span> (<a class="code hl_class" href="classplik.html">plik</a>);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classplik.html#a9464c40ea3c2af2febf4bab97e0ff295">   59</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classplik.html#a9464c40ea3c2af2febf4bab97e0ff295">plik::wczytajZPliku</a>(std::string sciezka, <a class="code hl_class" href="class_drzewo.html">Drzewo</a>&amp; drzewo) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    std::fstream <a class="code hl_function" href="classplik.html#a2077175d3e1ad2c4272ba19361a97d83">plik</a>(sciezka, std::ios::in);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">if</span> (!<a class="code hl_class" href="classplik.html">plik</a>) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        cout &lt;&lt; <span class="stringliteral">&quot;plik nie istnieje!&quot;</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">do</span> {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordtype">int</span> a;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_class" href="classplik.html">plik</a> &gt;&gt; a;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classplik.html">plik</a>.eof()) <a class="code hl_variable" href="classplik.html#a94c965a7c2b5c38f3fe79a07838f1cac">drzewo</a>.<a class="code hl_function" href="class_drzewo.html#ae95fe0076bf92a076244f41f837c24ca">dodajElement</a>(a);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    } <span class="keywordflow">while</span> (<a class="code hl_class" href="classplik.html">plik</a>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
 </div>
 <div class="ttc" id="a_drzewo_8h_html"><div class="ttname"><a href="_drzewo_8h.html">Drzewo.h</a></div></div>
 <div class="ttc" id="aclass_drzewo_html"><div class="ttname"><a href="class_drzewo.html">Drzewo</a></div><div class="ttdef"><b>Definition</b> <a href="_drzewo_8h_source.html#l00017">Drzewo.h:18</a></div></div>
-<div class="ttc" id="aclass_drzewo_html_ae95fe0076bf92a076244f41f837c24ca"><div class="ttname"><a href="class_drzewo.html#ae95fe0076bf92a076244f41f837c24ca">Drzewo::dodajElement</a></div><div class="ttdeci">void dodajElement(int wartosc)</div><div class="ttdoc">Dodaje nowy element do drzewa.</div><div class="ttdef"><b>Definition</b> <a href="_drzewo_8cpp_source.html#l00020">Drzewo.cpp:20</a></div></div>
+<div class="ttc" id="aclass_drzewo_html_ae95fe0076bf92a076244f41f837c24ca"><div class="ttname"><a href="class_drzewo.html#ae95fe0076bf92a076244f41f837c24ca">Drzewo::dodajElement</a></div><div class="ttdeci">void dodajElement(int wartosc)</div><div class="ttdoc">Dodaje nowy element do drzewa.</div><div class="ttdef"><b>Definition</b> <a href="_drzewo_8cpp_source.html#l00019">Drzewo.cpp:19</a></div></div>
 <div class="ttc" id="aclassplik_html"><div class="ttname"><a href="classplik.html">plik</a></div><div class="ttdef"><b>Definition</b> <a href="plik_8h_source.html#l00007">plik.h:8</a></div></div>
-<div class="ttc" id="aclassplik_html_a2077175d3e1ad2c4272ba19361a97d83"><div class="ttname"><a href="classplik.html#a2077175d3e1ad2c4272ba19361a97d83">plik::plik</a></div><div class="ttdeci">plik()</div><div class="ttdoc">Konstruktor klasy plik.</div><div class="ttdef"><b>Definition</b> <a href="#l00011">plik.cpp:11</a></div></div>
-<div class="ttc" id="aclassplik_html_a346f00eed3cb35c564f6524150f50c94"><div class="ttname"><a href="classplik.html#a346f00eed3cb35c564f6524150f50c94">plik::~plik</a></div><div class="ttdeci">~plik()</div><div class="ttdoc">Destruktor klasy plik.</div><div class="ttdef"><b>Definition</b> <a href="#l00018">plik.cpp:18</a></div></div>
-<div class="ttc" id="aclassplik_html_a74def0dd8fe2f3f2f7a2ca09aa8940e9"><div class="ttname"><a href="classplik.html#a74def0dd8fe2f3f2f7a2ca09aa8940e9">plik::zapiszDoPlikuBinarnego</a></div><div class="ttdeci">void zapiszDoPlikuBinarnego(elementDrzewa *element, const std::string &amp;plik)</div><div class="ttdoc">Zapisuje drzewo do pliku w formacie binarnym.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">plik.cpp:28</a></div></div>
-<div class="ttc" id="aclassplik_html_a794f06d300f508356e7859e23f125bd3"><div class="ttname"><a href="classplik.html#a794f06d300f508356e7859e23f125bd3">plik::zapiszElementDoPlikuBinarnego</a></div><div class="ttdeci">void zapiszElementDoPlikuBinarnego(elementDrzewa *element, std::ofstream &amp;file)</div><div class="ttdoc">Rekurencyjnie zapisuje elementy drzewa do pliku w formacie binarnym.</div><div class="ttdef"><b>Definition</b> <a href="#l00046">plik.cpp:46</a></div></div>
-<div class="ttc" id="aclassplik_html_a9464c40ea3c2af2febf4bab97e0ff295"><div class="ttname"><a href="classplik.html#a9464c40ea3c2af2febf4bab97e0ff295">plik::wczytajZPliku</a></div><div class="ttdeci">void wczytajZPliku(std::string sciezka, Drzewo &amp;drzewo)</div><div class="ttdoc">Wczytuje drzewo z pliku tekstowego.</div><div class="ttdef"><b>Definition</b> <a href="#l00060">plik.cpp:60</a></div></div>
+<div class="ttc" id="aclassplik_html_a2077175d3e1ad2c4272ba19361a97d83"><div class="ttname"><a href="classplik.html#a2077175d3e1ad2c4272ba19361a97d83">plik::plik</a></div><div class="ttdeci">plik()</div><div class="ttdoc">Konstruktor klasy plik.</div><div class="ttdef"><b>Definition</b> <a href="#l00010">plik.cpp:10</a></div></div>
+<div class="ttc" id="aclassplik_html_a346f00eed3cb35c564f6524150f50c94"><div class="ttname"><a href="classplik.html#a346f00eed3cb35c564f6524150f50c94">plik::~plik</a></div><div class="ttdeci">~plik()</div><div class="ttdoc">Destruktor klasy plik.</div><div class="ttdef"><b>Definition</b> <a href="#l00017">plik.cpp:17</a></div></div>
+<div class="ttc" id="aclassplik_html_a74def0dd8fe2f3f2f7a2ca09aa8940e9"><div class="ttname"><a href="classplik.html#a74def0dd8fe2f3f2f7a2ca09aa8940e9">plik::zapiszDoPlikuBinarnego</a></div><div class="ttdeci">void zapiszDoPlikuBinarnego(elementDrzewa *element, const std::string &amp;plik)</div><div class="ttdoc">Zapisuje drzewo do pliku w formacie binarnym.</div><div class="ttdef"><b>Definition</b> <a href="#l00027">plik.cpp:27</a></div></div>
+<div class="ttc" id="aclassplik_html_a794f06d300f508356e7859e23f125bd3"><div class="ttname"><a href="classplik.html#a794f06d300f508356e7859e23f125bd3">plik::zapiszElementDoPlikuBinarnego</a></div><div class="ttdeci">void zapiszElementDoPlikuBinarnego(elementDrzewa *element, std::ofstream &amp;file)</div><div class="ttdoc">Rekurencyjnie zapisuje elementy drzewa do pliku w formacie binarnym.</div><div class="ttdef"><b>Definition</b> <a href="#l00045">plik.cpp:45</a></div></div>
+<div class="ttc" id="aclassplik_html_a9464c40ea3c2af2febf4bab97e0ff295"><div class="ttname"><a href="classplik.html#a9464c40ea3c2af2febf4bab97e0ff295">plik::wczytajZPliku</a></div><div class="ttdeci">void wczytajZPliku(std::string sciezka, Drzewo &amp;drzewo)</div><div class="ttdoc">Wczytuje drzewo z pliku tekstowego.</div><div class="ttdef"><b>Definition</b> <a href="#l00059">plik.cpp:59</a></div></div>
 <div class="ttc" id="aclassplik_html_a94c965a7c2b5c38f3fe79a07838f1cac"><div class="ttname"><a href="classplik.html#a94c965a7c2b5c38f3fe79a07838f1cac">plik::drzewo</a></div><div class="ttdeci">Drzewo drzewo</div><div class="ttdef"><b>Definition</b> <a href="plik_8h_source.html#l00018">plik.h:18</a></div></div>
 <div class="ttc" id="aplik_8h_html"><div class="ttname"><a href="plik_8h.html">plik.h</a></div></div>
 <div class="ttc" id="astructelement_drzewa_html"><div class="ttname"><a href="structelement_drzewa.html">elementDrzewa</a></div><div class="ttdef"><b>Definition</b> <a href="_drzewo_8h_source.html#l00007">Drzewo.h:8</a></div></div>
