@@ -51,7 +51,7 @@ void Drzewo::dodajElement(int wartosc) {
 void Drzewo::usunElement(int wartosc) {
 	elementDrzewa* elementUsuwany = szukajElementu(wartosc);
 	if (elementUsuwany == nullptr) {
-		cout << "Element nie zosta³ znaleziony.\n";
+		cout << "Element nie zostal znaleziony.\n";
 		return;
 	}
 
@@ -129,7 +129,7 @@ void Drzewo::usunDrzewo() {};
 elementDrzewa* Drzewo::szukajElementu(int wartosc) {
 	elementDrzewa* temp = korzen;
 
-	while (temp->wartosc != wartosc){
+	while (temp){
 		
 		if (wartosc < temp->wartosc)
 		{
