@@ -1,5 +1,8 @@
 #include "Drzewo.h"
+#include <string>
 #include <iostream>
+#include <fstream>
+
 
 using namespace std;
 
@@ -49,7 +52,7 @@ void Drzewo::dodajElement(int wartosc) {
 void Drzewo::usunElement(int wartosc) {
 	elementDrzewa* elementUsuwany = szukajElementu(wartosc);
 	if (elementUsuwany == nullptr) {
-		cout << "Element nie zosta³ znaleziony.\n";
+		cout << "Element nie zostal znaleziony.\n";
 		return;
 	}
 
@@ -142,9 +145,9 @@ void Drzewo::usunDrzewo(elementDrzewa* element) {
 
 elementDrzewa* Drzewo::szukajElementu(int wartosc) {
 	elementDrzewa* temp = korzen;
+	while (temp){
+		cout << temp->wartosc << " ";
 
-	while (temp->wartosc != wartosc){
-		
 		if (wartosc < temp->wartosc)
 		{
 			if (temp->lewy ==nullptr)
@@ -163,9 +166,15 @@ elementDrzewa* Drzewo::szukajElementu(int wartosc) {
 			temp = temp->prawy;
 			
 		}
-		cout << temp->wartosc;
-	};
 
+		if (temp->wartosc == wartosc) 
+		{
+			cout << temp->wartosc << " ";
+			return temp;
+		}
+	};
+	
+	
 	return nullptr;
 };
 
@@ -192,24 +201,45 @@ void postorder(elementDrzewa* element) {
 	if (!element) return;
 
 	postorder(element->lewy);
+
 	postorder(element->prawy);
 	cout << element->wartosc << " ";
 }
 
 
-void Drzewo::wyswietlDrzewo() {
-	int komenda = 0;
-	elementDrzewa temp = *korzen;
-
-	cout << "0 - preorder, 1 - inorder, 2 - postorder\n>  ";
-	cin >> komenda;
+void Drzewo::zapiszDoPliku(elementDrzewa* element, std::ofstream& plik) {
+	if (element != nullptr) {
+		zapiszDoPliku(element->lewy, plik);
+		plik << element->wartosc << " ";
+		zapiszDoPliku(element->prawy, plik);
+	}
 }
 
 
 
+void Drzewo::wyswietlDrzewo() {
+	int komenda = 0;
+	if (korzen) elementDrzewa temp = *korzen; else {
+		cout << "Brak drzewa\n";
+		return;
+	}
+	
 
-void Drzewo::zapiszDoPliku() {
-};
-void Drzewo::wczytajZPliku() {
-};
+	cout << "0 - preorder, 1 - inorder, 2 - postorder\n>  ";
+	cin >> komenda;
+	switch (komenda)
+	{
+	case 0:
+		preorder(korzen);
+		break;
+	case 1:
+		inorder(korzen);
+		break;
+	case 2:
+		postorder(korzen);
+		break;
 
+	default:
+		break;
+	}
+};
