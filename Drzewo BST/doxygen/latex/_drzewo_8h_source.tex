@@ -1,0 +1,41 @@
+\doxysubsection{Drzewo.\+h}
+\hypertarget{_drzewo_8h_source}{}\label{_drzewo_8h_source}\index{C:/Users/kidi/Desktop/Drzewo BST/Drzewo-\/BST/Drzewo BST/Drzewo BST/Drzewo.h@{C:/Users/kidi/Desktop/Drzewo BST/Drzewo-\/BST/Drzewo BST/Drzewo BST/Drzewo.h}}
+\mbox{\hyperlink{_drzewo_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00007}\mbox{\hyperlink{structelement_drzewa}{00007}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structelement_drzewa}{elementDrzewa}}}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00009}\mbox{\hyperlink{structelement_drzewa_abdde126fd8b3f0d86ff6201cdb8a4b72}{00009}}\ \ \ \ \ \mbox{\hyperlink{structelement_drzewa}{elementDrzewa}}*\ \mbox{\hyperlink{structelement_drzewa_abdde126fd8b3f0d86ff6201cdb8a4b72}{lewy}};}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00010}\mbox{\hyperlink{structelement_drzewa_a343dc72026d4ee5fc39709306ec1f850}{00010}}\ \ \ \ \ \mbox{\hyperlink{structelement_drzewa}{elementDrzewa}}*\ \mbox{\hyperlink{structelement_drzewa_a343dc72026d4ee5fc39709306ec1f850}{prawy}};}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00011}\mbox{\hyperlink{structelement_drzewa_ae6c5da1946a6099f867ced66c0ad9f37}{00011}}\ \ \ \ \ \mbox{\hyperlink{structelement_drzewa}{elementDrzewa}}*\ \mbox{\hyperlink{structelement_drzewa_ae6c5da1946a6099f867ced66c0ad9f37}{rodzic}};}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00012}\mbox{\hyperlink{structelement_drzewa_a168d996301a58ced1790017feeff4dff}{00012}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structelement_drzewa_a168d996301a58ced1790017feeff4dff}{wartosc}};}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00014}\mbox{\hyperlink{structelement_drzewa_acb4a1ae6f3e1cc048bdc8243d0afb45e}{00014}}\ \ \ \ \ \mbox{\hyperlink{structelement_drzewa_acb4a1ae6f3e1cc048bdc8243d0afb45e}{elementDrzewa}}()\ :\ \mbox{\hyperlink{structelement_drzewa_ae6c5da1946a6099f867ced66c0ad9f37}{rodzic}}(nullptr),\ \mbox{\hyperlink{structelement_drzewa_abdde126fd8b3f0d86ff6201cdb8a4b72}{lewy}}(nullptr),\ \mbox{\hyperlink{structelement_drzewa_a343dc72026d4ee5fc39709306ec1f850}{prawy}}(nullptr),\ \mbox{\hyperlink{structelement_drzewa_a168d996301a58ced1790017feeff4dff}{wartosc}}\{\}\ \{\};}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00015}00015\ \};}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00017}\mbox{\hyperlink{class_drzewo}{00017}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_drzewo}{Drzewo}}}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00018}00018\ \{}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00020}\mbox{\hyperlink{class_drzewo_a3c6776013a4c8a43bead7d98cbceb1e7}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_drzewo_a3c6776013a4c8a43bead7d98cbceb1e7}{iloscElementow}};}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00023}\mbox{\hyperlink{class_drzewo_a98a8ecf73a134b804c324f363b2301e2}{00023}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structelement_drzewa}{elementDrzewa}}*\ \mbox{\hyperlink{class_drzewo_a98a8ecf73a134b804c324f363b2301e2}{korzen}};}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00025}00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_drzewo_a309a5197b6a02c761f046fc99136eebb}{Drzewo}}();}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_drzewo_ae95fe0076bf92a076244f41f837c24ca}{dodajElement}}(\textcolor{keywordtype}{int}\ wartosc)\ ;}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_drzewo_a4d8d0cd6fdff30dd74d821d0b2996c1a}{usunElement}}(\textcolor{keywordtype}{int}\ wartosc)\ ;}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_drzewo_acab4bec1a0ccf452d2e8affabe8ddb76}{usunDrzewo}}(\mbox{\hyperlink{structelement_drzewa}{elementDrzewa}}\ *\ element)\ ;}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00030}00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structelement_drzewa}{elementDrzewa}}*\ \mbox{\hyperlink{class_drzewo_aeb04ca25373b44c6d4d85d88cd7c68af}{szukajElementu}}(\textcolor{keywordtype}{int}\ wartosc)\ ;}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_drzewo_a01c31f40e78edea04db40037b2da5910}{wyswietlDrzewo}}()\ ;}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_drzewo_a5c8e380f2873a996018ee744d0323367}{zapiszDoPliku}}(\mbox{\hyperlink{structelement_drzewa}{elementDrzewa}}*\ element,\ std::ofstream\&\ \mbox{\hyperlink{classplik}{plik}});}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00033}00033\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00034}00034\ \};}
+\DoxyCodeLine{\Hypertarget{_drzewo_8h_source_l00035}00035\ }
+
+\end{DoxyCode}

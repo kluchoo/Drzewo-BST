@@ -1,0 +1,150 @@
+\doxysubsection{plik Class Reference}
+\hypertarget{classplik}{}\label{classplik}\index{plik@{plik}}
+
+
+{\ttfamily \#include $<$plik.\+h$>$}
+
+\doxysubsubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classplik_a2077175d3e1ad2c4272ba19361a97d83}{plik}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy plik. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classplik_a346f00eed3cb35c564f6524150f50c94}{\texorpdfstring{$\sim$}{\string~}plik}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy plik. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classplik_a74def0dd8fe2f3f2f7a2ca09aa8940e9}{zapisz\+Do\+Pliku\+Binarnego}} (\mbox{\hyperlink{structelement_drzewa}{element\+Drzewa}} \texorpdfstring{$\ast$}{*}element, const std\+::string \&\mbox{\hyperlink{classplik}{plik}})
+\begin{DoxyCompactList}\small\item\em Zapisuje drzewo do pliku w formacie binarnym. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classplik_a9464c40ea3c2af2febf4bab97e0ff295}{wczytaj\+ZPliku}} (std\+::string sciezka, \mbox{\hyperlink{class_drzewo}{Drzewo}} \&\mbox{\hyperlink{classplik_a94c965a7c2b5c38f3fe79a07838f1cac}{drzewo}})
+\begin{DoxyCompactList}\small\item\em Wczytuje drzewo z pliku tekstowego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classplik_a794f06d300f508356e7859e23f125bd3}{zapisz\+Element\+Do\+Pliku\+Binarnego}} (\mbox{\hyperlink{structelement_drzewa}{element\+Drzewa}} \texorpdfstring{$\ast$}{*}element, std\+::ofstream \&file)
+\begin{DoxyCompactList}\small\item\em Rekurencyjnie zapisuje elementy drzewa do pliku w formacie binarnym. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_drzewo}{Drzewo}} \mbox{\hyperlink{classplik_a94c965a7c2b5c38f3fe79a07838f1cac}{drzewo}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{plik_8h_source_l00007}{7}} of file \mbox{\hyperlink{plik_8h_source}{plik.\+h}}.
+
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classplik_a2077175d3e1ad2c4272ba19361a97d83}\index{plik@{plik}!plik@{plik}}
+\index{plik@{plik}!plik@{plik}}
+\doxyparagraph{\texorpdfstring{plik()}{plik()}}
+{\footnotesize\ttfamily \label{classplik_a2077175d3e1ad2c4272ba19361a97d83} 
+plik\+::plik (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy plik. 
+
+
+
+Definition at line \mbox{\hyperlink{plik_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{plik_8cpp_source}{plik.\+cpp}}.
+
+\Hypertarget{classplik_a346f00eed3cb35c564f6524150f50c94}\index{plik@{plik}!````~plik@{\texorpdfstring{$\sim$}{\string~}plik}}
+\index{````~plik@{\texorpdfstring{$\sim$}{\string~}plik}!plik@{plik}}
+\doxyparagraph{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}plik()}{\string~plik()}}
+{\footnotesize\ttfamily \label{classplik_a346f00eed3cb35c564f6524150f50c94} 
+plik\+::\texorpdfstring{$\sim$}{\string~}plik (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destruktor klasy plik. 
+
+
+
+Definition at line \mbox{\hyperlink{plik_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{plik_8cpp_source}{plik.\+cpp}}.
+
+
+
+\doxysubsubsection{Member Function Documentation}
+\Hypertarget{classplik_a9464c40ea3c2af2febf4bab97e0ff295}\index{plik@{plik}!wczytajZPliku@{wczytajZPliku}}
+\index{wczytajZPliku@{wczytajZPliku}!plik@{plik}}
+\doxyparagraph{\texorpdfstring{wczytajZPliku()}{wczytajZPliku()}}
+{\footnotesize\ttfamily \label{classplik_a9464c40ea3c2af2febf4bab97e0ff295} 
+void plik\+::wczytaj\+ZPliku (\begin{DoxyParamCaption}\item[{std\+::string}]{sciezka}{, }\item[{\mbox{\hyperlink{class_drzewo}{Drzewo}} \&}]{drzewo}{}\end{DoxyParamCaption})}
+
+
+
+Wczytuje drzewo z pliku tekstowego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sciezka} & Œcie¿ka do pliku, z którego ma zostaæ wczytane drzewo. \\
+\hline
+{\em drzewo} & Referencja do obiektu drzewa, do którego maj¹ zostaæ dodane elementy. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{plik_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{plik_8cpp_source}{plik.\+cpp}}.
+
+\Hypertarget{classplik_a74def0dd8fe2f3f2f7a2ca09aa8940e9}\index{plik@{plik}!zapiszDoPlikuBinarnego@{zapiszDoPlikuBinarnego}}
+\index{zapiszDoPlikuBinarnego@{zapiszDoPlikuBinarnego}!plik@{plik}}
+\doxyparagraph{\texorpdfstring{zapiszDoPlikuBinarnego()}{zapiszDoPlikuBinarnego()}}
+{\footnotesize\ttfamily \label{classplik_a74def0dd8fe2f3f2f7a2ca09aa8940e9} 
+void plik\+::zapisz\+Do\+Pliku\+Binarnego (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structelement_drzewa}{element\+Drzewa}} \texorpdfstring{$\ast$}{*}}]{element}{, }\item[{const std\+::string \&}]{plik}{}\end{DoxyParamCaption})}
+
+
+
+Zapisuje drzewo do pliku w formacie binarnym. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & WskaŸnik na korzeñ drzewa. \\
+\hline
+{\em plik} & Œcie¿ka do pliku, w którym ma zostaæ zapisane drzewo. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{plik_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{plik_8cpp_source}{plik.\+cpp}}.
+
+\Hypertarget{classplik_a794f06d300f508356e7859e23f125bd3}\index{plik@{plik}!zapiszElementDoPlikuBinarnego@{zapiszElementDoPlikuBinarnego}}
+\index{zapiszElementDoPlikuBinarnego@{zapiszElementDoPlikuBinarnego}!plik@{plik}}
+\doxyparagraph{\texorpdfstring{zapiszElementDoPlikuBinarnego()}{zapiszElementDoPlikuBinarnego()}}
+{\footnotesize\ttfamily \label{classplik_a794f06d300f508356e7859e23f125bd3} 
+void plik\+::zapisz\+Element\+Do\+Pliku\+Binarnego (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structelement_drzewa}{element\+Drzewa}} \texorpdfstring{$\ast$}{*}}]{element}{, }\item[{std\+::ofstream \&}]{file}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Rekurencyjnie zapisuje elementy drzewa do pliku w formacie binarnym. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & WskaŸnik na element drzewa. \\
+\hline
+{\em file} & Referencja do strumienia pliku. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{plik_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{plik_8cpp_source}{plik.\+cpp}}.
+
+
+
+\doxysubsubsection{Member Data Documentation}
+\Hypertarget{classplik_a94c965a7c2b5c38f3fe79a07838f1cac}\index{plik@{plik}!drzewo@{drzewo}}
+\index{drzewo@{drzewo}!plik@{plik}}
+\doxyparagraph{\texorpdfstring{drzewo}{drzewo}}
+{\footnotesize\ttfamily \label{classplik_a94c965a7c2b5c38f3fe79a07838f1cac} 
+\mbox{\hyperlink{class_drzewo}{Drzewo}} plik\+::drzewo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{plik_8h_source_l00018}{18}} of file \mbox{\hyperlink{plik_8h_source}{plik.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/kidi/\+Desktop/\+Drzewo BST/\+Drzewo-\/\+BST/\+Drzewo BST/\+Drzewo BST/\mbox{\hyperlink{plik_8h}{plik.\+h}}\item 
+C\+:/\+Users/kidi/\+Desktop/\+Drzewo BST/\+Drzewo-\/\+BST/\+Drzewo BST/\+Drzewo BST/\mbox{\hyperlink{plik_8cpp}{plik.\+cpp}}\end{DoxyCompactItemize}
