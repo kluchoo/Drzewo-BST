@@ -1,5 +1,7 @@
 #include "Drzewo.h"
 #include <iostream>
+#include <fstream>
+
 
 using namespace std;
 
@@ -176,9 +178,21 @@ void postorder(elementDrzewa* element) {
 	if (!element) return;
 
 	postorder(element->lewy);
+
 	postorder(element->prawy);
 	cout << element->wartosc << " ";
 }
+
+#include "drzewo.h"
+
+void Drzewo::zapiszDoPliku(elementDrzewa* element, std::ofstream& plik) {
+	if (element != nullptr) {
+		zapiszDoPliku(element->lewy, plik);
+		plik << element->wartosc << " ";
+		zapiszDoPliku(element->prawy, plik);
+	}
+}
+
 
 
 void Drzewo::wyswietlDrzewo() {
@@ -203,12 +217,3 @@ void Drzewo::wyswietlDrzewo() {
 		break;
 	}
 };
-
-//dasdfasd
-
-
-void Drzewo::zapiszDoPliku() {
-};
-void Drzewo::wczytajZPliku() {
-};
-

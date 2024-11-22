@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include <fstream>
+
 
 struct elementDrzewa
 {
@@ -15,10 +17,10 @@ struct elementDrzewa
 class Drzewo
 {
 	private:
-		elementDrzewa* korzen;
 		int iloscElementow;
 
 	public:
+		elementDrzewa* korzen;
 
 		Drzewo();
 
@@ -27,9 +29,7 @@ class Drzewo
 		void usunDrzewo() ;
 		elementDrzewa* szukajElementu(int wartosc) ;
 		void wyswietlDrzewo() ;
-		void zapiszDoPliku() ;
-		void wczytajZPliku();
+		void zapiszDoPliku(elementDrzewa* element, std::ofstream& plik);
 		
-
 };
 

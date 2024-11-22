@@ -129,9 +129,11 @@
   <ItemGroup>
     <ClCompile Include="Drzewo BST.cpp" />
     <ClCompile Include="Drzewo.cpp" />
+    <ClCompile Include="plik.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Drzewo.h" />
+    <ClInclude Include="plik.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
