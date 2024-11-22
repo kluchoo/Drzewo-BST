@@ -1,4 +1,5 @@
 #include "Drzewo.h"
+#include <string>
 #include <iostream>
 #include <fstream>
 
@@ -128,9 +129,9 @@ void Drzewo::usunDrzewo() {};
 
 elementDrzewa* Drzewo::szukajElementu(int wartosc) {
 	elementDrzewa* temp = korzen;
-
 	while (temp){
-		
+		cout << temp->wartosc << " ";
+
 		if (wartosc < temp->wartosc)
 		{
 			if (temp->lewy ==nullptr)
@@ -149,9 +150,15 @@ elementDrzewa* Drzewo::szukajElementu(int wartosc) {
 			temp = temp->prawy;
 			
 		}
-		cout << temp->wartosc;
-	};
 
+		if (temp->wartosc == wartosc) 
+		{
+			cout << temp->wartosc << " ";
+			return temp;
+		}
+	};
+	
+	
 	return nullptr;
 };
 
@@ -197,7 +204,11 @@ void Drzewo::zapiszDoPliku(elementDrzewa* element, std::ofstream& plik) {
 
 void Drzewo::wyswietlDrzewo() {
 	int komenda = 0;
-	elementDrzewa temp = *korzen;
+	if (korzen) elementDrzewa temp = *korzen; else {
+		cout << "Brak drzewa\n";
+		return;
+	}
+	
 
 	cout << "0 - preorder, 1 - inorder, 2 - postorder\n>  ";
 	cin >> komenda;
