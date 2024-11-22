@@ -9,7 +9,7 @@ public:
 	plik();
 	~plik();
 
-	void zapiszDoPlikuBinarnego();
+	void zapiszDoPlikuBinarnego(elementDrzewa* element, std::ofstream& plik);
 	void wczytajZPliku();
 
 	Drzewo drzewo;
