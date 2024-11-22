@@ -1,0 +1,51 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {polish}{}\relax 
+\contentsline {section}{\numberline {1}Indeks klas}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Lista klas}{1}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Indeks plików}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Lista plików}{2}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Dokumentacja klas}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Dokumentacja klasy Drzewo}{2}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Dokumentacja konstruktora i destruktora}{2}{subsubsection.3.1.1}%
+\contentsline {paragraph}{Drzewo()}{2}{section*.4}%
+\contentsline {subsubsection}{\numberline {3.1.2}Dokumentacja funkcji składowych}{3}{subsubsection.3.1.2}%
+\contentsline {paragraph}{dodajElement()}{3}{section*.5}%
+\contentsline {paragraph}{szukajElementu()}{3}{section*.6}%
+\contentsline {paragraph}{usunDrzewo()}{3}{section*.7}%
+\contentsline {paragraph}{usunElement()}{3}{section*.8}%
+\contentsline {paragraph}{wyswietlDrzewo()}{3}{section*.9}%
+\contentsline {paragraph}{zapiszDoPliku()}{3}{section*.10}%
+\contentsline {subsubsection}{\numberline {3.1.3}Dokumentacja atrybutów składowych}{3}{subsubsection.3.1.3}%
+\contentsline {paragraph}{iloscElementow}{3}{section*.11}%
+\contentsline {paragraph}{korzen}{3}{section*.12}%
+\contentsline {subsection}{\numberline {3.2}Dokumentacja struktury element\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewa}{4}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Dokumentacja konstruktora i destruktora}{4}{subsubsection.3.2.1}%
+\contentsline {paragraph}{elementDrzewa()}{4}{section*.15}%
+\contentsline {subsubsection}{\numberline {3.2.2}Dokumentacja atrybutów składowych}{4}{subsubsection.3.2.2}%
+\contentsline {paragraph}{lewy}{4}{section*.16}%
+\contentsline {paragraph}{prawy}{4}{section*.17}%
+\contentsline {paragraph}{rodzic}{4}{section*.18}%
+\contentsline {paragraph}{wartosc}{4}{section*.19}%
+\contentsline {subsection}{\numberline {3.3}Dokumentacja klasy plik}{5}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Dokumentacja konstruktora i destruktora}{5}{subsubsection.3.3.1}%
+\contentsline {paragraph}{plik()}{5}{section*.23}%
+\contentsline {paragraph}{$\sim $plik()}{5}{section*.24}%
+\contentsline {subsubsection}{\numberline {3.3.2}Dokumentacja funkcji składowych}{5}{subsubsection.3.3.2}%
+\contentsline {paragraph}{wczytajZPliku()}{5}{section*.25}%
+\contentsline {paragraph}{zapiszDoPlikuBinarnego()}{5}{section*.26}%
+\contentsline {paragraph}{zapiszElementDoPlikuBinarnego()}{6}{section*.27}%
+\contentsline {subsubsection}{\numberline {3.3.3}Dokumentacja atrybutów składowych}{6}{subsubsection.3.3.3}%
+\contentsline {paragraph}{drzewo}{6}{section*.28}%
+\contentsline {section}{\numberline {4}Dokumentacja plików}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Dokumentacja pliku C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/kidi/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo BST/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}BST/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo BST/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo BST/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo BST.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Dokumentacja pliku C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/kidi/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo BST/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}BST/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo BST/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo BST/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo.cpp}{6}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Dokumentacja funkcji}{7}{subsubsection.4.2.1}%
+\contentsline {paragraph}{inorder()}{7}{section*.30}%
+\contentsline {paragraph}{postorder()}{7}{section*.31}%
+\contentsline {paragraph}{preorder()}{7}{section*.32}%
+\contentsline {subsection}{\numberline {4.3}Dokumentacja pliku C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/kidi/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo BST/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}BST/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo BST/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo BST/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo.h}{7}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Drzewo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{7}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Dokumentacja pliku C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/kidi/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo BST/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}BST/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo BST/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo BST/plik.cpp}{8}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Dokumentacja pliku C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/kidi/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo BST/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}BST/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo BST/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Drzewo BST/plik.h}{8}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}plik.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{8}{subsection.4.7}%
+\contentsline {section}{Skorowidz}{9}{section*.35}%

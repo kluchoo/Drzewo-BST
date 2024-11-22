@@ -5,14 +5,12 @@
 #include <string>
 using namespace std;
 
-/**
- * @brief Głowna funkcja programu.
- *
- * Funkcja main() obsluguje interakcje z uzytkownikiem, umozliwiajac dodawanie, usuwanie elementow drzewa,
- * wyswietlanie drzewa oraz zapisywanie i wczytywanie drzewa z pliku.
- *
- * @return int Zwraca 0, jesli program zakonczyl sie pomyslnie, lub 1, jesli wystapil blad otwarcia pliku.
- */
+
+/// @brief Głowna funkcja programu.
+ // Funkcja main() obsluguje interakcje z uzytkownikiem, umozliwiajac dodawanie, usuwanie elementow drzewa,
+ // wyswietlanie drzewa oraz zapisywanie i wczytywanie drzewa z pliku.
+ //return int Zwraca 0, jesli program zakonczyl sie pomyslnie, lub 1, jesli wystapil blad otwarcia pliku.
+
 int main()
 {
     std::ofstream p("a.txt");

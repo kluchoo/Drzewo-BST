@@ -4,18 +4,8 @@
 
 using namespace std;
 
-/**
- * @brief Konstruktor klasy Drzewo.
- *
- * Inicjalizuje korzen drzewa jako nullptr oraz ilosc elementow jako 0.
- */
 Drzewo::Drzewo() : korzen(nullptr), iloscElementow(0) {}
 
-/**
- * @brief Dodaje nowy element do drzewa.
- *
- * @param wartosc Wartosc nowego elementu do dodania.
- */
 void Drzewo::dodajElement(int wartosc) {
     elementDrzewa* nowyElement = new elementDrzewa;
     nowyElement->wartosc = wartosc;
@@ -53,11 +43,6 @@ void Drzewo::dodajElement(int wartosc) {
     }
 }
 
-/**
- * @brief Usuwa element o podanej wartosci z drzewa.
- *
- * @param wartosc Wartosc elementu do usuniecia.
- */
 void Drzewo::usunElement(int wartosc) {
     elementDrzewa* elementUsuwany = szukajElementu(wartosc);
     if (elementUsuwany == nullptr) {
@@ -65,18 +50,14 @@ void Drzewo::usunElement(int wartosc) {
         return;
     }
 
-    // Przypadek 1: Wezel ma dwoje dzieci
     if (elementUsuwany->lewy != nullptr && elementUsuwany->prawy != nullptr) {
-        // Znajdz nastepnika (najwiekszy wezel w lewym poddrzewie)
         elementDrzewa* nastepca = elementUsuwany->lewy;
         while (nastepca->prawy != nullptr) {
             nastepca = nastepca->prawy;
         }
 
-        // Skopiuj wartosc nastepnika do elementu usuwanego
         elementUsuwany->wartosc = nastepca->wartosc;
 
-        // Usun nastepnika
         if (nastepca->rodzic->lewy == nastepca) {
             nastepca->rodzic->lewy = nastepca->lewy;
         }
@@ -90,11 +71,9 @@ void Drzewo::usunElement(int wartosc) {
 
         delete nastepca;
     }
-    // Przypadek 2: Wezel ma jedno dziecko
     else if (elementUsuwany->lewy != nullptr || elementUsuwany->prawy != nullptr) {
         elementDrzewa* dziecko = (elementUsuwany->lewy != nullptr) ? elementUsuwany->lewy : elementUsuwany->prawy;
 
-        // Podlacz dziecko do rodzica elementu usuwanego
         if (elementUsuwany->rodzic != nullptr) {
             if (elementUsuwany->rodzic->lewy == elementUsuwany) {
                 elementUsuwany->rodzic->lewy = dziecko;
@@ -104,14 +83,12 @@ void Drzewo::usunElement(int wartosc) {
             }
         }
         else {
-            // Jezeli elementUsuwany jest korzeniem, aktualizujemy korzen drzewa
             korzen = dziecko;
         }
 
         dziecko->rodzic = elementUsuwany->rodzic;
         delete elementUsuwany;
     }
-    // Przypadek 3: Wezel jest lisciem
     else {
         if (elementUsuwany->rodzic != nullptr) {
             if (elementUsuwany->rodzic->lewy == elementUsuwany) {
@@ -122,7 +99,6 @@ void Drzewo::usunElement(int wartosc) {
             }
         }
         else {
-            // Usuwamy korzen drzewa, gdy jest jedynym wezlem
             korzen = nullptr;
         }
 
@@ -130,11 +106,6 @@ void Drzewo::usunElement(int wartosc) {
     }
 }
 
-/**
- * @brief Usuwa cale drzewo.
- *
- * @param element Wskaznik na korzen drzewa.
- */
 void Drzewo::usunDrzewo(elementDrzewa* element) {
     if (element == nullptr) {
         return;
@@ -143,16 +114,10 @@ void Drzewo::usunDrzewo(elementDrzewa* element) {
     usunDrzewo(element->lewy);
     usunDrzewo(element->prawy);
 
-    std::cout << element->wartosc << std::endl;   // wypisanie  
-    delete element;   // element usuwania
+    std::cout << element->wartosc << std::endl;
+    delete element;
 }
 
-/**
- * @brief Szuka elementu o podanej wartosci w drzewie.
- *
- * @param wartosc Wartosc elementu do znalezienia.
- * @return elementDrzewa* Wskaznik na znaleziony element lub nullptr, jesli element nie zostal znaleziony.
- */
 elementDrzewa* Drzewo::szukajElementu(int wartosc) {
     elementDrzewa* temp = korzen;
     while (temp) {
@@ -179,11 +144,6 @@ elementDrzewa* Drzewo::szukajElementu(int wartosc) {
     return nullptr;
 }
 
-/**
- * @brief Wykonuje przejscie drzewa w porzadku preorder.
- *
- * @param element Wskaznik na korzen drzewa.
- */
 void preorder(elementDrzewa* element) {
     if (!element) return;
 
@@ -192,11 +152,6 @@ void preorder(elementDrzewa* element) {
     preorder(element->prawy);
 }
 
-/**
- * @brief Wykonuje przejscie drzewa w porzadku inorder.
- *
- * @param element Wskaznik na korzen drzewa.
- */
 void inorder(elementDrzewa* element) {
     if (!element) return;
 
@@ -205,11 +160,6 @@ void inorder(elementDrzewa* element) {
     inorder(element->prawy);
 }
 
-/**
- * @brief Wykonuje przejscie drzewa w porzadku postorder.
- *
- * @param element Wskaznik na korzen drzewa.
- */
 void postorder(elementDrzewa* element) {
     if (!element) return;
 
@@ -218,12 +168,6 @@ void postorder(elementDrzewa* element) {
     cout << element->wartosc << " ";
 }
 
-/**
- * @brief Zapisuje drzewo do pliku.
- *
- * @param element Wskaznik na korzen drzewa.
- * @param plik Referencja do strumienia pliku.
- */
 void Drzewo::zapiszDoPliku(elementDrzewa* element, std::ofstream& plik) {
     if (element != nullptr) {
         zapiszDoPliku(element->lewy, plik);
@@ -232,9 +176,6 @@ void Drzewo::zapiszDoPliku(elementDrzewa* element, std::ofstream& plik) {
     }
 }
 
-/**
- * @brief Wyswietla drzewo.
- */
 void Drzewo::wyswietlDrzewo() {
     int komenda = 0;
     if (korzen) elementDrzewa temp = *korzen; else if (korzen == nullptr) {

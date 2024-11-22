@@ -1,0 +1,117 @@
+\begin{theindex}
+
+  \item {\texorpdfstring{$\sim$}{\string~}plik}
+    \subitem {plik}, \hyperpage{5}
+
+  \indexspace
+
+  \item {C:/Users/kidi/Desktop/Drzewo BST/Drzewo-\/BST/Drzewo BST/Drzewo BST/Drzewo BST.cpp}, 
+		\hyperpage{6}
+  \item {C:/Users/kidi/Desktop/Drzewo BST/Drzewo-\/BST/Drzewo BST/Drzewo BST/Drzewo.cpp}, 
+		\hyperpage{6}
+  \item {C:/Users/kidi/Desktop/Drzewo BST/Drzewo-\/BST/Drzewo BST/Drzewo BST/Drzewo.h}, 
+		\hyperpage{7}
+  \item {C:/Users/kidi/Desktop/Drzewo BST/Drzewo-\/BST/Drzewo BST/Drzewo BST/plik.cpp}, 
+		\hyperpage{8}
+  \item {C:/Users/kidi/Desktop/Drzewo BST/Drzewo-\/BST/Drzewo BST/Drzewo BST/plik.h}, 
+		\hyperpage{8}
+
+  \indexspace
+
+  \item {dodajElement}
+    \subitem {Drzewo}, \hyperpage{3}
+  \item {Drzewo}, \hyperpage{2}
+    \subitem {dodajElement}, \hyperpage{3}
+    \subitem {Drzewo}, \hyperpage{2}
+    \subitem {iloscElementow}, \hyperpage{3}
+    \subitem {korzen}, \hyperpage{3}
+    \subitem {szukajElementu}, \hyperpage{3}
+    \subitem {usunDrzewo}, \hyperpage{3}
+    \subitem {usunElement}, \hyperpage{3}
+    \subitem {wyswietlDrzewo}, \hyperpage{3}
+    \subitem {zapiszDoPliku}, \hyperpage{3}
+  \item {drzewo}
+    \subitem {plik}, \hyperpage{6}
+  \item {Drzewo.cpp}
+    \subitem {inorder}, \hyperpage{7}
+    \subitem {postorder}, \hyperpage{7}
+    \subitem {preorder}, \hyperpage{7}
+
+  \indexspace
+
+  \item {elementDrzewa}, \hyperpage{4}
+    \subitem {elementDrzewa}, \hyperpage{4}
+    \subitem {lewy}, \hyperpage{4}
+    \subitem {prawy}, \hyperpage{4}
+    \subitem {rodzic}, \hyperpage{4}
+    \subitem {wartosc}, \hyperpage{4}
+
+  \indexspace
+
+  \item {iloscElementow}
+    \subitem {Drzewo}, \hyperpage{3}
+  \item {inorder}
+    \subitem {Drzewo.cpp}, \hyperpage{7}
+
+  \indexspace
+
+  \item {korzen}
+    \subitem {Drzewo}, \hyperpage{3}
+
+  \indexspace
+
+  \item {lewy}
+    \subitem {elementDrzewa}, \hyperpage{4}
+
+  \indexspace
+
+  \item {plik}, \hyperpage{5}
+    \subitem {\texorpdfstring{$\sim$}{\string~}plik}, \hyperpage{5}
+    \subitem {drzewo}, \hyperpage{6}
+    \subitem {plik}, \hyperpage{5}
+    \subitem {wczytajZPliku}, \hyperpage{5}
+    \subitem {zapiszDoPlikuBinarnego}, \hyperpage{5}
+    \subitem {zapiszElementDoPlikuBinarnego}, \hyperpage{5}
+  \item {postorder}
+    \subitem {Drzewo.cpp}, \hyperpage{7}
+  \item {prawy}
+    \subitem {elementDrzewa}, \hyperpage{4}
+  \item {preorder}
+    \subitem {Drzewo.cpp}, \hyperpage{7}
+
+  \indexspace
+
+  \item {rodzic}
+    \subitem {elementDrzewa}, \hyperpage{4}
+
+  \indexspace
+
+  \item {szukajElementu}
+    \subitem {Drzewo}, \hyperpage{3}
+
+  \indexspace
+
+  \item {usunDrzewo}
+    \subitem {Drzewo}, \hyperpage{3}
+  \item {usunElement}
+    \subitem {Drzewo}, \hyperpage{3}
+
+  \indexspace
+
+  \item {wartosc}
+    \subitem {elementDrzewa}, \hyperpage{4}
+  \item {wczytajZPliku}
+    \subitem {plik}, \hyperpage{5}
+  \item {wyswietlDrzewo}
+    \subitem {Drzewo}, \hyperpage{3}
+
+  \indexspace
+
+  \item {zapiszDoPliku}
+    \subitem {Drzewo}, \hyperpage{3}
+  \item {zapiszDoPlikuBinarnego}
+    \subitem {plik}, \hyperpage{5}
+  \item {zapiszElementDoPlikuBinarnego}
+    \subitem {plik}, \hyperpage{5}
+
+\end{theindex}
