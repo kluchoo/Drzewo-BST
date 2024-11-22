@@ -2,6 +2,16 @@
 #include "Drzewo.h"
 #include <iostream>
 #include <fstream>
+#include <string>
+using namespace std;
+
+plik::plik()
+{
+}
+
+plik::~plik()
+{
+}
 
 
 void plik::zapiszDoPlikuBinarnego(elementDrzewa* element, std::ofstream& plik) {
@@ -11,6 +21,17 @@ void plik::zapiszDoPlikuBinarnego(elementDrzewa* element, std::ofstream& plik) {
         zapiszDoPlikuBinarnego(element->prawy, plik);
     }
 };
-void plik::wczytajZPliku() {
+void plik::wczytajZPliku(std::string sciezka, Drzewo& drzewo) {
+    std::fstream plik(sciezka, std::ios::in);
 
+    if (!plik) {
+        cout << "plik nie istnieje!";
+        return;
+    }
+
+    do{
+        int a;
+        plik >> a;
+        if(!plik.eof()) drzewo.dodajElement(a);
+    } while (plik);
 };

@@ -2,6 +2,7 @@
 
 #include "Drzewo.h"
 #include <fstream>
+#include <string>
 
 class plik
 {
@@ -10,16 +11,8 @@ public:
 	~plik();
 
 	void zapiszDoPlikuBinarnego(elementDrzewa* element, std::ofstream& plik);
-	void wczytajZPliku();
+	void wczytajZPliku(std::string sciezka, Drzewo& drzewo);
 
 	Drzewo drzewo;
 private:
 };
-
-plik::plik()
-{
-}
-
-plik::~plik()
-{
-}
