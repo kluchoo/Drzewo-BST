@@ -190,7 +190,6 @@ void postorder(elementDrzewa* element) {
 	cout << element->wartosc << " ";
 }
 
-#include "drzewo.h"
 
 void Drzewo::zapiszDoPliku(elementDrzewa* element, std::ofstream& plik) {
 	if (element != nullptr) {

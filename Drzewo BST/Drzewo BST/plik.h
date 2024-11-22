@@ -10,9 +10,12 @@ public:
 	plik();
 	~plik();
 
-	void zapiszDoPlikuBinarnego(elementDrzewa* element, std::ofstream& plik);
+public:
+	void zapiszDoPlikuBinarnego(elementDrzewa* element, const std::string& plik);
 	void wczytajZPliku(std::string sciezka, Drzewo& drzewo);
-
+private:
+	void zapiszElementDoPlikuBinarnego(elementDrzewa* element, std::ofstream& file);
 	Drzewo drzewo;
+
 private:
 };

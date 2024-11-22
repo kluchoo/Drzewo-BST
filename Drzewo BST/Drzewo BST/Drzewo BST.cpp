@@ -7,6 +7,11 @@ using namespace std;
 
 int main()
 {
+	std::ofstream p("a.txt");
+	if (!p) {
+		cerr << "Nie można otworzyć pliku do zapisu!" << endl;
+		return 1;
+	}
 
 	Drzewo drzewo;
 	plik plik;
@@ -55,10 +60,24 @@ int main()
 			system("pause");
 			break;
 		case 6:
+			if (p) {
+				cout << "Zapis do pliku..." << endl;
+				drzewo.zapiszDoPliku(drzewo.korzen, p);
+				p.close(); // Zamknięcie pliku po zapisie
+				cout << "Zapis zakończony." << endl;
+			}
+			system("pause");
 			break;
 		case 7:
+			if (p) {
+				cout << "Zapis do pliku..." << endl;
+				plik.zapiszDoPlikuBinarnego(drzewo.korzen, "a.txt");
+				p.close(); // Zamknięcie pliku po zapisie
+				cout << "Zapis zakończony." << endl;
+			}
 			break;
 		case 8:
+			plik.wczytajZPliku("a.txt", drzewo);
 			break;
 		default:
 			break;
@@ -68,7 +87,7 @@ int main()
 
 
 
-	plik.wczytajZPliku("a.txt", drzewo);
+
 
 	drzewo.wyswietlDrzewo();
 }
